@@ -62,6 +62,9 @@ namespace my_books
             {
                 endpoints.MapControllers();
             });
+
+            // Adding Data To DB For The First Time If The DB Do Not Have Any Data
+            AppDbInitalizer.Seed(app);
         }
     }
 }
